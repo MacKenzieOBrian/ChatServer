@@ -1,4 +1,4 @@
-# Concurrent Chat Server in Java: A Deep Dive into Concurrency Principles
+# Concurrent Chat Server in Java
 
 This project is a practical demonstration of Java concurrency, designed to reinforce key concepts learned in lectures and connect them to best practices in building scalable, multi-threaded applications. The chat server provides a hands-on environment where you can see how concurrency patterns affect both design and performance.
 

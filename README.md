@@ -1,6 +1,6 @@
 # Concurrent Chat Server in Java
 
-This project is a practical demonstration of Java concurrency
+This project is a practical demonstration of Java concurrency from CSCU9V6 
 
 ## System Architecture
 

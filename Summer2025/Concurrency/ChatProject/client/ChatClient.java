@@ -8,12 +8,13 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class ChatClient {
-
+    // Server connection details
     private static final String SERVER_ADDRESS = "localhost";
     private static final int SERVER_PORT = 9090;
 
     public static void main(String[] args) {
         try (Socket socket = new Socket(SERVER_ADDRESS, SERVER_PORT);
+            // input and output streams needed to communicate with the server
              BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
              PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
              Scanner scanner = new Scanner(System.in)) {

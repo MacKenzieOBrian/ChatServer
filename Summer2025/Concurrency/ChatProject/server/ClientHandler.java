@@ -12,11 +12,13 @@ public class ClientHandler implements Runnable {
     private ChatServer server;
     private PrintWriter out;
     private BufferedReader in;
-    private String clientIdentifier; // To store a unique identifier for the client
+    private String clientIdentifier; 
 
+    // Constructor
     public ClientHandler(Socket socket, ChatServer server) {
         this.clientSocket = socket;
         this.server = server;
+        
         try {
             this.out = new PrintWriter(clientSocket.getOutputStream(), true);
             this.in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
@@ -30,7 +32,7 @@ public class ClientHandler implements Runnable {
     @Override
     public void run() {
         try {
-            // First message from client is expected to be their desired identifier (e.g., username)
+            // first message from client should be their identifier
             String initialMessage = in.readLine();
             if (initialMessage != null && initialMessage.startsWith("IDENTIFY:")) {
                 this.clientIdentifier = initialMessage.substring("IDENTIFY:".length()).trim();
